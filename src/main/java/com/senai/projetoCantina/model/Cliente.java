@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Cliente {
 	private Long id;
-	private String nomeCliente;
-	private String email;
-	private String senha;
+	private Long idTipoCliente;
+	private String nome;
+	private String matricula;
 	
 	public Cliente() {
 		
@@ -20,28 +20,28 @@ public class Cliente {
 		this.id = id;
 	}
 
-	public String getNomeCliente() {
-		return nomeCliente;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNomeCliente(String nomeCliente) {
-		this.nomeCliente = nomeCliente;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getMatricula() {
+		return matricula;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 
-	public String getSenha() {
-		return senha;
+	public String getIdTipoCliente() {
+		return idTipoCliente;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setIdTipoCliente(String idTipoCliente) {
+		this.idTipoCliente = idTipoCliente;
 	}
 	
 	@Override
@@ -54,7 +54,7 @@ public class Cliente {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(getClass());
+		return Objects.hash(id);
 		
 	}
 
