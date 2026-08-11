@@ -1,10 +1,16 @@
 package com.senai.projetoCantina.model;
 
+import java.util.Objects;
+
 public class Produto {
 	
 	private Long id;
 	private Categoria id_categoria;
 	private String nome;
+	
+	public Produto() {
+		
+	}
 	
 	public Long getId() {
 		return id;
@@ -26,5 +32,18 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	//=============================
+	@Override
+	public boolean equals(Object o) {
+		if(this == o)return true;
+		if(o == null||getClass()!= o.getClass())return false;
+		Produto produto = (Produto) o;
+		return id != null && id.equals(produto.id);
+	}
+	@Override 
+	public int hashCode() {
+		return Objects.hash(getClass());
+	}
+	
 
 }
