@@ -9,11 +9,10 @@ public class Categoria {
    private String nome;
    private String descricao;
 
-
 	public Categoria() {
 		
 	}
-
+	//=============================
 	public Long getId() {
 		return id;
 	}
