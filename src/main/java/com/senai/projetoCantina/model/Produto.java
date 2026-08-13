@@ -5,8 +5,9 @@ import java.util.Objects;
 public class Produto {
 	
 	private Long id;
-	private Categoria id_categoria;
+	private double precoVendas;
 	private String nome;
+	private Categoria categoria;
 	
 	public Produto() {
 		
@@ -19,13 +20,6 @@ public class Produto {
 		this.id = id;
 	}
 	//=============================
-	public Categoria getId_categoria() {
-		return id_categoria;
-	}
-	public void setId_categoria(Categoria id_categoria) {
-		this.id_categoria = id_categoria;
-	}
-	//=============================
 	public String getNome() {
 		return nome;
 	}
@@ -33,6 +27,20 @@ public class Produto {
 		this.nome = nome;
 	}
 	//=============================
+	public double getPrecoVendas() {
+		return precoVendas;
+	}
+	public void setPrecoVendas(double precoVendas) {
+		this.precoVendas = precoVendas;
+	}
+	//=============================
+	public Categoria getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+	//========================================================
 	@Override
 	public boolean equals(Object o) {
 		if(this == o)return true;
