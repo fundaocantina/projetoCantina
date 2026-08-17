@@ -9,6 +9,6 @@ import com.senai.projetoCantina.model.Produto;
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
 	Optional<Produto> findByNome(String nome);
 	
-	List<Produto>buscarPorPrecoVendas(double precoVendas);
-	List<Produto>buscarPorCategoriaId(Long categoria);
+	List<Produto> findByPrecoVendas(double precoVendas);
+	List<Produto> findByCategoriaId(Long categoriaId);
 }

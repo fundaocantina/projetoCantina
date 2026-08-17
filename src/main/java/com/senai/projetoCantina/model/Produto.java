@@ -50,7 +50,7 @@ public class Produto {
 	}
 	@Override 
 	public int hashCode() {
-		return Objects.hash(getClass());
+		return Objects.hash(id);
 	}
 	
 

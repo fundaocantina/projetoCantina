@@ -43,7 +43,7 @@ public class EstoqueService {
 		novaMovimentacao.setDataMovimento(LocalDateTime.now());
 		novaMovimentacao.setProduto(produto);
 		
-		movimentacaoRepository.save(novaMovimentacao);
+		movimentacaoRepository.saveAllAndFlush(null);
 		
 		atualizarPrateleira(produto, saldoAtual, valorUnitario, novaMovimentacao);
 		

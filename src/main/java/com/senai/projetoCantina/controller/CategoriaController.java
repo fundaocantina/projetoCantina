@@ -40,11 +40,11 @@ public class CategoriaController {
 	public String salvar(@ModelAttribute Categoria categoria, RedirectAttributes flash) {
 		try {
 			categoriaService.cadastrar(categoria);
-			flash.addAttribute("sucesso", "Categoria cadastrada com sucesso!");
-			return "redirect:/categoria";
+			flash.addFlashAttribute("sucesso", "Categoria cadastrada com sucesso!");
+			return "redirect:/categorias";
 		} catch (IllegalStateException e) {
 			flash.addFlashAttribute("erro", e.getMessage());
-			return "redirect:/categoria/novo";
+			return "redirect:/categorias/novo";
 		}
 	}
 

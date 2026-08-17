@@ -47,7 +47,7 @@ public class EstoqueController {
 			return "redirect:/estoque";
 		} catch (IllegalStateException e) {
 			flash.addFlashAttribute("erro", e.getMessage());
-			return "redirect:/estoque/saida";
+			return "redirect:/estoque/entrada";
 		}
 	}
 	

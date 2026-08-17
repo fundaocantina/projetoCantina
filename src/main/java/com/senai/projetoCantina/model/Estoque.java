@@ -46,14 +46,14 @@ public class Estoque {
 	public Produto getProduto() {
 		return produto;
 	}
-	public void setProduto() {
+	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}
 	//=============================
 	public MovimentacaoEstoque getMovimentacaoEstoque() {
 		return movimentacaoEstoque;
 	}
-	public void setMovimentacaoEstoque() {
+	public void setMovimentacaoEstoque(MovimentacaoEstoque movimentacaoEstoque) {
 		this.movimentacaoEstoque = movimentacaoEstoque;
 	}
 	//=============================
@@ -66,7 +66,7 @@ public class Estoque {
 	}
 	@Override 
 	public int hashCode() {
-		return Objects.hash(getClass());
+		return Objects.hash(id);
 	}
 	
 	

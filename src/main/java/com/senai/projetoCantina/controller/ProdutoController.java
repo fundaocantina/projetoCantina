@@ -40,7 +40,7 @@ public class ProdutoController {
 	public String salvar(@ModelAttribute Produto produto, RedirectAttributes flash) {
 		try {
 			produtoService.cadastrar(produto);
-			flash.addFlashAttribute("sucesso", "Produto encontrado com sucesso");
+			flash.addFlashAttribute("sucesso", "Produto cadastrado com sucesso!");
 			return "redirect:/produtos";
 		} catch (IllegalStateException e) {
 			flash.addFlashAttribute("erro", e.getMessage());
