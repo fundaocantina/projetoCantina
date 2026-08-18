@@ -2,11 +2,18 @@ package com.senai.projetoCantina.model;
 
 import java.util.Objects;
 
-public class FormaPagamento {
+import jakarta.persistence.*;
 
-	//comentario desnecessario por que esta lendo?
+@Entity
+@Table(name = "tb_forma_pagamento")
+public class FormaPagamento {
 	
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
+	
+	@Enumerated(EnumType.STRING)
+    @Column(name = "tipo", nullable = false, length = 30)
     private TipoPagamento tipo;
 
     public FormaPagamento() {
