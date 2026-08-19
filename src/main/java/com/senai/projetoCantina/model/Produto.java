@@ -1,12 +1,22 @@
 package com.senai.projetoCantina.model;
 
+import jakarta.persistence.*;
 import java.util.Objects;
 
+
+@Entity
+@Table(name = "produto")
 public class Produto {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_produto")
 	private Long id;
+	@Column(name = "preco_venda")
 	private double precoVendas;
 	private String nome;
+	@ManyToOne
+	@JoinColumn(name = "id_categoria")
 	private Categoria categoria;
 	
 	public Produto() {

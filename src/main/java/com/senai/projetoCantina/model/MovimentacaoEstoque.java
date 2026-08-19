@@ -1,17 +1,29 @@
 package com.senai.projetoCantina.model;
 
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+
+@Entity
+@Table(name = "movimentacao_estoque")
 public class MovimentacaoEstoque {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_movimentacao_estoque")
 	private Long id;
 	private String tipo;
 	private String origem;
 	private int quantidade;
+	@Column(name = "saldo_anterior")
 	private int saldoAnterior;
+	@Column(name = "saldo_atual")
 	private int saldoAtual;
+	@Column(name = "data_movimento")
 	private LocalDateTime dataMovimento;
+	@ManyToOne
+	@JoinColumn(name = "id_produto")
 	private Produto produto;
 	
 	
