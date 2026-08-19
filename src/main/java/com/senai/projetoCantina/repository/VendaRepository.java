@@ -9,7 +9,6 @@ import java.util.List;
 @Repository
 public interface VendaRepository extends JpaRepository<Venda, Long> {
 
-    // Métodos de consulta customizados (Spring Data gera a Query automaticamente pelo nome do método)
     List<Venda> findByIdCliente(Long idCliente);
 
     List<Venda> findByIdFuncionario(Long idFuncionario);
